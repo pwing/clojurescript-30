@@ -1,8 +1,15 @@
 {:paths   ["src" "target" "resources"]
+ ; the figwheel-main dependency is what allows you to use figwheel.
+ ; This is a repl which you can use for repl-driven development.
+ ; The figwheel repl is connected to a browser via websockets to
+ ; hot reload any changed clojurescript code.
  :deps    {org.clojure/clojurescript {:mvn/version "1.10.764"}
            com.bhauman/figwheel-main {:mvn/version "0.2.11"}}
-
+; aliases are used by the clj tool to know which options to use when "running" a certain alias,
+; e.g. dev, test etc.
  :aliases {:dev
+           ; the main-opts are parameters to add to the command line when running clj using the -M
+           ; option, i.e. using clojure.main to run the program.
            {:main-opts ["--main"  "figwheel.main"
                         "--build" "dev" 
                         "--repl"]}}}

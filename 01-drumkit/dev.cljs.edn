@@ -1,1 +1,3 @@
+;this a build configuration file used by figwheel I suspect, telling figwheel
+;what to compile from cljs to javascript
 {:main app.core}
